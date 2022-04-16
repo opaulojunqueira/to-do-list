@@ -8,7 +8,7 @@ export default function App() {
   const [taskItems, setTaskItems] = useState([]);
 
   const AddTasks = () => {
-    if (task === null) {
+    if (task == null || task == "") {
       return
     }
     setTaskItems([...taskItems, task])
@@ -59,7 +59,8 @@ export default function App() {
 const styles = StyleSheet.create({
   Container: {
     flex: 1,
-    backgroundColor: '#E3E3E3',
+    color: '#FFFFFF',
+    backgroundColor: '#121212',
   },
   TasksContainer: {
     paddingTop: 45,
@@ -67,26 +68,32 @@ const styles = StyleSheet.create({
   },
   Title: {
     fontSize: 32,
+    color: '#FFFFFF',
     fontWeight: 'bold',
   },
   Items: {
     marginTop: 30,
   },
+
+  //input Text
   WriteTask: {
     position: 'absolute',
     bottom: 30,
     width: '100%',
     flexDirection: 'row',
-    justifyContent: 'space-around',
+    justifyContent: 'flex-start',
     alignItems: 'center',
   },
   Input: {
     paddingVertical: 15,
     paddingHorizontal: 15,
-    backgroundColor: '#fff',
+    backgroundColor: '',
+    color: '#e8e8e8',
     borderRadius: 40,
     borderWidth: 1,
-    width: 260,
+    width: '100%',
+    marginStart: 30,
+    marginEnd: 10,
 
     shadowColor: "#000",
     shadowOffset: {
@@ -99,14 +106,17 @@ const styles = StyleSheet.create({
     elevation: 6,
     zIndex: 1,
   },
+
+  //AddTasks
   AddTask: {
     width: 60,
     height: 60,
-    backgroundColor: '#fff',
+    backgroundColor: '#4b0082',
     borderRadius: 50,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,
+    marginRight: 30,
 
     shadowColor: "#000",
     shadowOffset: {
@@ -119,7 +129,8 @@ const styles = StyleSheet.create({
     elevation: 6,
   },
   AddTaskText: {
-    fontSize: 24,
+    fontSize: 45,
     color: '#8C8C8C',
+    marginTop: -10,
   },
 });
