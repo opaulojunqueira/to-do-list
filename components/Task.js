@@ -17,7 +17,7 @@ const Task = (props) => {
 
 const styles = StyleSheet.create({
     Item: {
-        backgroundColor: '#fff',
+        backgroundColor: '#0d0d0d',
         padding: 15,
         borderRadius: 10,
         flexDirection: 'row',
@@ -25,10 +25,10 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         marginBottom: 20,
 
-        shadowColor: "#000",
+        shadowColor: "#4b0082",
         shadowOffset: {
-            width: 1,
-            height: 1,
+            width: 2,
+            height: 2,
         },
         shadowOpacity: 0.20,
         shadowRadius: 1.50,
@@ -42,11 +42,12 @@ const styles = StyleSheet.create({
     },
     ItemText: {
         maxWidth: '100%',
+        color: '#e8e8e8',
         fontSize: 16,
     },
     IconTrash: {
         fontSize: 24,
-        color: '#556faa'
+        color: '#4b0082'
     }
 });
 

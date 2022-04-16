@@ -33,7 +33,7 @@ export default function App() {
             taskItems.map((item, index) => {
               return (
                 <TouchableOpacity onPress={() => completeTask(index)}>
-                  <Task text={item} />
+                  <Task text={item}/>
                 </TouchableOpacity>
               )
             })
@@ -42,7 +42,7 @@ export default function App() {
       </View>
 
       <KeyboardAvoidingView style={styles.WriteTask}> {/* behavior={Platform.OS === 'ios' ? 'padding' : 'height'} */}
-        <TextInput style={styles.Input} placeholder={'Escreva uma tarefa'} value={task} onChangeText={text => setTask(text)}></TextInput>
+        <TextInput style={styles.Input} placeholder={'Insira sua tarefa. . .'} value={task} onChangeText={text => setTask(text)}></TextInput>
 
         <TouchableOpacity onPress={() => AddTasks()}>
           <View style={styles.AddTask}>
@@ -87,10 +87,9 @@ const styles = StyleSheet.create({
   Input: {
     paddingVertical: 15,
     paddingHorizontal: 15,
-    backgroundColor: '',
+    backgroundColor: '#0d0d0d',
     color: '#e8e8e8',
-    borderRadius: 40,
-    borderWidth: 1,
+    borderRadius: 10,
     width: '100%',
     marginStart: 30,
     marginEnd: 10,
@@ -109,21 +108,20 @@ const styles = StyleSheet.create({
 
   //AddTasks
   AddTask: {
-    width: 60,
-    height: 60,
+    width: 50,
+    height: 50,
     backgroundColor: '#4b0082',
-    borderRadius: 50,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
-    borderWidth: 1,
     marginRight: 30,
 
     shadowColor: "#000",
     shadowOffset: {
-      width: 1,
-      height: 1,
+      width: 2,
+      height: 2,
     },
-    shadowOpacity: 0.20,
+    shadowOpacity: 0.50,
     shadowRadius: 1.50,
 
     elevation: 6,
